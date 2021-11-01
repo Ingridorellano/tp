@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" ,initial scale="1.0">
+
+    <!--Estilos  "".css"  -->
+    <link rel="stylesheet" type="text/css" href="C:\Users\airam\OneDrive\Escritorio\tp\estilos\estilos.css">
+
+<!--enlace javascript-->
+<link rel="stylesheet"      type="text/js"       href="C:\Users\airam\OneDrive\Escritorio\tp\validacion().js">
+</head>
+
+
+<body>
+
+    <form name="f1" action="destino.html" onsubmit="return validacion();">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre">
+        <label for="edad">edad:</label>
+        <imput type="number"></imput>
+         <label id="mensaje"></label>
+        <input type="reset" value="Cancelar">
+        <br><br>
+    </form>
+
+    <script>
+        function validacion() 
+        {
+            valor = document.getElementById("nombre").value;
+            
+            if( valor == null || valor.length == 0) 
+            {
+                
+                document.getElementById('mensaje').innerHTML = "Tenes que completar el Nombre!";
+                elemento = document.getElementById('nombre');
+                elemento.focus();
+                
+                return false;
+            }
+            return true;          
+        }
+    </script>
+
+<form name="f1" action="C:\Users\airam\OneDrive\Escritorio\tp\formulariodestino.html" onsubmit="return validacion();">
+    <label for="email">Email:</label>
+    <input type="text" id="email" placeholder="Ingrese su email"> <label id="mensaje"></label><br><br>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Cancelar">
+</form>
+  </body>
